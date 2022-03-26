@@ -10,28 +10,27 @@
 
     <title>Person's list</title>
 </head>
-<body>
+<body id="bodyid">
     <div class="navbar"> 
-        <label>Chercher</label>
+       <label></label> 
         <div class="input1">  
-        <input type="text" placeholder="" name="chercher">
+        <input type="text" placeholder="Chercher" name="chercher">
         </div>
     </div>
-    <table id="MaTable"width="100%" >
-       
-          <tr>  
+    <table id="t1" width="100%" >
+    <thead>
+    <tr>  
             <th > nom</th>
             <th > prenom</th>
             <th > date naissance</th>
             <th > gender</th>
-            <th > action</th>
-          </tr>
+            <th > action</th> 
+    </tr>
+    </thead>
+    <tbody id="t1body">
 
-          
-
-          
-
-        </table> 
+    </tbody>
+    </table> 
        
 
 <!-- Debut du tp -->
@@ -39,6 +38,12 @@
 
 
 <script src="jee.js"></script>
+<script>
+$( window ).on('load',function() {
+    fetch1();
+
+});
+</script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
