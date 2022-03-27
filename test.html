@@ -10,11 +10,11 @@
 
     <title>Person's list</title>
 </head>
-<body id="bodyid">
+<body id="bodyid" onload="fetch1()">
     <div class="navbar"> 
-       <label></label> 
+       <label>Ajouter un etudiant</label> 
         <div class="input1">  
-        <input type="text" placeholder="Chercher" name="chercher">
+        <input type="text" placeholder="Chercher" name="chercher" id="chercher">
         </div>
     </div>
     <table id="t1" width="100%" >
@@ -27,7 +27,7 @@
             <th > action</th> 
     </tr>
     </thead>
-    <tbody id="t1body">
+    <tbody id="t1body" >
 
     </tbody>
     </table> 
@@ -38,12 +38,7 @@
 
 
 <script src="jee.js"></script>
-<script>
-$( window ).on('load',function() {
-    fetch1();
 
-});
-</script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -30,7 +30,8 @@ var etudiants = [
     },
     
   ];
-  function fetch1() {
+
+function fetch1() {
     
     for (var i in etudiants) {
        var ligne = `<tr>
@@ -44,10 +45,19 @@ var etudiants = [
     }
 }   
 
-$( window ).on('load',function() {
-    fetch1();
 
-});
+
+
+
+
+
+
+window.onload = function() {
+    fetch1();
+  };
+
+
+
 
 
 
