@@ -10,7 +10,7 @@
 
     <title>Person's list</title>
 </head>
-<body id="bodyid" onload="fetch1()">
+<body id="bodyid" >
     <div class="navbar"> 
        <!-- <label>Ajouter un etudiant</label>  -->
        <button type="button" class="btn btn-primary" id="ajouter">Ajouter un etudiant</button>
@@ -20,13 +20,77 @@
     </div>
 
 <form id="MyForm" action="" method="post">
-          <label>Enter Name</label>
-        <input type="text" name="name" placeholder="Enter your name"/><br>
-          <label>Enter Email</label>
-        <input type="email" name="email" placeholder="Enter your email"/><br>
-          <input type="button" class="btn btn-default" id="submit" name="submit" value="Submit"/>
+    <br>
+    <br>
+    <label><h2>Ajouter un nouveau etudiant : </h2></label>
+    <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" id="nom" name="nom" placeholder="nom"/>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prenom">
+        </div>
+      </div>
+      <br>
+    <br>
+      <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <select name="genre" id="genre" class="custom-select" required>
+                  <option value="">Genre</option>
+                  <option value="Homme">Homme</option>
+                  <option value="Femme">Femme</option>
+                </select>
+              </div>
+        </div>
+        <div class="col">
+          <input type="date" name="date" class="form-control" id="date" placeholder="Last name">
+        </div>
+      </div>
+      <br>
+    <br>
+         
+        <input type="button" class="btn btn-primary" id="submit" name="submit" value="Submit"/>
     </form>
-
+    <form id="MyFormedit" action="" method="post">
+      <br>
+      <br>
+      <label><h2>modifier un etudiant : </h2></label>
+      <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" id="nomm" name="nom" />
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" id="prenomm" name="prenom" />
+          </div>
+        </div>
+        <br>
+      <br>
+        <div class="row">
+          <div class="col">
+              <div class="form-group">
+                  <select name="genre" id="genree" class="custom-select" required>
+                    <option value="">Genre</option>
+                    <option value="Homme">Homme</option>
+                    <option value="Femme">Femme</option>
+                  </select>
+                </div>
+          </div>
+          <div class="col">
+            <input type="date" name="date" class="form-control" id="datee" />
+          </div>
+        </div>
+        <br>
+      <br>
+           
+          <input type="button" class="btn btn-primary" id="submitedit" name="submit" value="Submit"/>
+      </form> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 <table id="t1" width="100%" >
 <thead>
     <tr>  
@@ -57,34 +121,3 @@
         
 </body>
 </html>
-<!-- <form> 
-
-    <input type="text" class="englishWord"> <input type="text" class="spanishWord"> 
-    <br> <br> 
-   <input type="text" class="englishWord"> <input type="text" class="spanishWord"> 
-   <br> <br> 
-   <input type="text" class="englishWord"> <input type="text" class="spanishWord"> 
-     <br> <br> 
-    <input type="text" class="englishWord"> <input type="text" class="spanishWord"> 
-    <br> <br> 
-<input type="text" class="englishWord"> <input type="text" class="spanishWord"> <br> <br> 
-
-
-<button id="submit"> Submit </button>
-</form>
-
-<script> 
-
-document.getElementById("submit").addEventListener("click", handler9); 
-
-function handler9() {
-
-let vocabEnglish = [];
-let englishWords = document.getElementsByClassName("englishWord");
-
-
-for (let i = 0; i < englishWords.length; i++) {
-        let englishWord = englishWords[i].value;
-        vocabEnglish.push(englishWord); 
-    }
-} -->
