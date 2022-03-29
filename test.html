@@ -12,13 +12,23 @@
 </head>
 <body id="bodyid" onload="fetch1()">
     <div class="navbar"> 
-       <label>Ajouter un etudiant</label> 
+       <!-- <label>Ajouter un etudiant</label>  -->
+       <button type="button" class="btn btn-primary" id="ajouter">Ajouter un etudiant</button>
         <div class="input1">  
-        <input type="text" placeholder="Chercher" name="chercher" id="chercher">
+        <input type="text" placeholder="Chercher" name="chercher" id="chercher" onkeyup="search()">
         </div>
     </div>
-    <table id="t1" width="100%" >
-    <thead>
+
+<form id="MyForm" action="" method="post">
+          <label>Enter Name</label>
+        <input type="text" name="name" placeholder="Enter your name"/><br>
+          <label>Enter Email</label>
+        <input type="email" name="email" placeholder="Enter your email"/><br>
+          <input type="button" class="btn btn-default" id="submit" name="submit" value="Submit"/>
+    </form>
+
+<table id="t1" width="100%" >
+<thead>
     <tr>  
             <th > nom</th>
             <th > prenom</th>
@@ -47,3 +57,34 @@
         
 </body>
 </html>
+<!-- <form> 
+
+    <input type="text" class="englishWord"> <input type="text" class="spanishWord"> 
+    <br> <br> 
+   <input type="text" class="englishWord"> <input type="text" class="spanishWord"> 
+   <br> <br> 
+   <input type="text" class="englishWord"> <input type="text" class="spanishWord"> 
+     <br> <br> 
+    <input type="text" class="englishWord"> <input type="text" class="spanishWord"> 
+    <br> <br> 
+<input type="text" class="englishWord"> <input type="text" class="spanishWord"> <br> <br> 
+
+
+<button id="submit"> Submit </button>
+</form>
+
+<script> 
+
+document.getElementById("submit").addEventListener("click", handler9); 
+
+function handler9() {
+
+let vocabEnglish = [];
+let englishWords = document.getElementsByClassName("englishWord");
+
+
+for (let i = 0; i < englishWords.length; i++) {
+        let englishWord = englishWords[i].value;
+        vocabEnglish.push(englishWord); 
+    }
+} -->

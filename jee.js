@@ -30,20 +30,34 @@ var etudiants = [
     },
     
   ];
-
-function fetch1() {
+function fetch1(etudiants) {
     
     for (var i in etudiants) {
-       var ligne = `<tr>
+       var ligne =
+        `
+
+        <tr>
             <td> ${etudiants[i].nom}</td>
             <td> ${etudiants[i].prenom}</td>
             <td> ${etudiants[i].genre}</td>
             <td> ${etudiants[i].dtNaiss}</td>
-        </tr>`
+        </tr>
+
+        `
         var table = $('#t1body')
         table.append(ligne)
     }
-}   
+}  
+const search = () => {
+
+    let filter = document.getElementById('chercher').value.toUpperCase();
+
+}
+
+
+
+
+//https://www.youtube.com/watch?v=DzXmAKdEYIs&t=78s
 
 
 
@@ -53,8 +67,33 @@ function fetch1() {
 
 
 window.onload = function() {
-    fetch1();
+    fetch1(etudiants);
   };
+
+
+  let aj = document.getElementById("ajouter")
+
+  aj.addEventListener("click", function(e) {
+      
+      t1.style.display = "none"
+      aj.style.display = "none"
+      
+      document.getElementById("MyForm").style.display = "block"
+      
+       
+  })
+
+  let ajouteyt = document.getElementById("submit")
+
+  ajouteyt.addEventListener("click", function(e) {
+      
+      t1.style.display = "block"
+      aj.style.display = "block"
+      
+      document.getElementById("MyForm").style.display = "none"
+      
+       
+  })
 
 
 

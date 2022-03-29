@@ -53,3 +53,11 @@ table{
     border-color: green;
     float:right; 
   }
+
+  #MyForm{
+    display: none;
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 14px;
+      background: #ececec;
+  }
